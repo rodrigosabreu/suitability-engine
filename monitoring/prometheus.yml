@@ -1,0 +1,52 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: suitability-engine
+    environment: ${ENVIRONMENT:development}
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+rule_files:
+  - "rules/*.yml"
+
+scrape_configs:
+  - job_name: 'suitability-engine'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8080']
+    metrics_path: /actuator/prometheus
+    scrape_interval: 10s
+
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres:5432']
+    # Use postgres_exporter if available
+
+  - job_name: 'kafka'
+    static_configs:
+      - targets: ['kafka:9092']
+    # Use kafka_exporter if available
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'eventstore'
+    static_configs:
+      - targets: ['eventstore:2113']
+
+  - job_name: 'vault'
+    static_configs:
+      - targets: ['vault:8200']
+
+  - job_name: 'opa'
+    static_configs:
+      - targets: ['opa:8181']
+
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']

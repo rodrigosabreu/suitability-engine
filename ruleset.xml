@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Suitability Engine Rules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>Custom PMD rules for Suitability Engine</description>
+
+    <rule ref="category/java/bestpractices.xml/AbstractClassWithoutAbstractMethod"/>
+    <rule ref="category/java/bestpractices.xml/AbstractClassWithoutAnyMethod"/>
+    <rule ref="category/java/bestpractices.xml/AvoidReassigningParameters"/>
+    <rule ref="category/java/bestpractices.xml/AvoidThrowingRawExceptionTypes"/>
+    <rule ref="category/java/bestpractices.xml/AvoidThrowingNullPointerException"/>
+    <rule ref="category/java/bestpractices.xml/AvoidUsingHardCodedIP"/>
+    <rule ref="category/java/bestpractices.xml/CheckResultSet"/>
+    <rule ref="category/java/bestpractices.xml/ConstantsInInterface"/>
+    <rule ref="category/java/bestpractices.xml/GuardDebugLogging"/>
+    <rule ref="category/java/bestpractices.xml/GuardLogStatementJavaUtil"/>
+    <rule ref="category/java/bestpractices.xml/UnusedFormalParameter"/>
+    <rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
+    <rule ref="category/java/bestpractices.xml/UnusedPrivateField"/>
+    <rule ref="category/java/bestpractices.xml/UnusedPrivateMethod"/>
+    <rule ref="category/java/bestpractices.xml/UseCollectionIsEmpty"/>
+    <rule ref="category/java/bestpractices.xml/UseVarargs"/>
+
+    <rule ref="category/java/codestyle.xml/AbstractNaming"/>
+    <rule ref="category/java/codestyle.xml/AtLeastOneConstructor"/>
+    <rule ref="category/java/codestyle.xml/ClassNamingConventions"/>
+    <rule ref="category/java/codestyle.xml/MethodNamingConventions"/>
+    <rule ref="category/java/codestyle.xml/VariableNamingConventions"/>
+    <rule ref="category/java/codestyle.xml/ConstantNamingConventions"/>
+    <rule ref="category/java/codestyle.xml/AvoidPrefixingMethodParameters"/>
+    <rule ref="category/java/codestyle.xml/BooleanGetMethodName"/>
+    <rule ref="category/java/codestyle.xml/GenericsNaming"/>
+    <rule ref="category/java/codestyle.xml/ShortVariable"/>
+    <rule ref="category/java/codestyle.xml/UnnecessaryFullyQualifiedName"/>
+    <rule ref="category/java/codestyle.xml/UnnecessaryLocalVariable"/>
+    <rule ref="category/java/codestyle.xml/UnnecessaryModifier"/>
+    <rule ref="category/java/codestyle.xml/UnnecessaryParentheses"/>
+
+    <rule ref="category/java/design.xml/AbstractClassWithoutAnyMethod"/>
+    <rule ref="category/java/design.xml/TooManyFields"/>
+    <rule ref="category/java/design.xml/TooManyMethods"/>
+    <rule ref="category/java/design.xml/ExcessiveClassLength"/>
+    <rule ref="category/java/design.xml/ExcessiveMethodLength"/>
+    <rule ref="category/java/design.xml/ExcessiveParameterList"/>
+    <rule ref="category/java/design.xml/NPathComplexity"/>
+    <rule ref="category/java/design.xml/CyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="15"/>
+        </property>
+    </rule>
+    <rule ref="category/java/design.xml/ModifiedCyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="15"/>
+        </property>
+    </rule>
+
+    <rule ref="category/java/errorprone.xml/EmptyCatchBlock"/>
+    <rule ref="category/java/errorprone.xml/EmptyFinallyBlock"/>
+    <rule ref="category/java/errorprone.xml/EmptyTryBlock"/>
+    <rule ref="category/java/errorprone.xml/EmptySwitchStatementsBranch"/>
+    <rule ref="category/java/errorprone.xml/EmptyInitializer"/>
+    <rule ref="category/java/errorprone.xml/EmptyStatementBlock"/>
+    <rule ref="category/java/errorprone.xml/EqualsNull"/>
+    <rule ref="category/java/errorprone.xml/InvalidLogMessageFormat"/>
+    <rule ref="category/java/errorprone.xml/MethodWithSameNameAsEnclosingClass"/>
+    <rule ref="category/java/errorprone.xml/NonStaticInitializer"/>
+    <rule ref="category/java/errorprone.xml/OverrideBothEqualsAndHashcode"/>
+    <rule ref="category/java/errorprone.xml/ProperCloneImplementation"/>
+    <rule ref="category/java/errorprone.xml/ReturnFromFinallyBlock"/>
+    <rule ref="category/java/errorprone.xml/UnnecessaryConversionTemporary"/>
+    <rule ref="category/java/errorprone.xml/InvalidLogMessageFormat">
+        <properties>
+            <property name="loggerName" value="logger|log|LOG"/>
+        </property>
+    </rule>
+
+    <rule ref="category/java/multithreading.xml/UnsynchronizedStaticFormatter">
+        <properties>
+            <property name="allowedFormatters" value="java.time.format.DateTimeFormatter,java.text.SimpleDateFormat"/>
+        </property>
+    </rule>
+    <rule ref="category/java/multithreading.xml/DoubleCheckedLocking"/>
+    <rule ref="category/java/multithreading.xml/NonThreadSafeSingleton"/>
+    <rule ref="category/java/multithreading.xml/UnsynchronizedStaticDateFormatter"/>
+
+    <rule ref="category/java/performance.xml/ConsecutiveLiteralAppends"/>
+    <rule ref="category/java/performance.xml/InsufficientStringBufferDeclaration"/>
+    <rule ref="category/java/performance.xml/RedundantFieldInitializer"/>
+    <rule ref="category/java/performance.xml/UseArrayListInsteadOfVector"/>
+    <rule ref="category/java/performance.xml/UseStringBufferForStringAppends"/>
+    <rule ref="category/java/performance.xml/AvoidInstantiatingObjectsInLoops"/>
+    <rule ref="category/java/performance.xml/UseStringBufferLength"/>
+    <rule ref="category/java/performance.xml/AvoidFileStream"/>
+    <rule ref="category/java/performance.xml/UseIndexOfChar"/>
+
+    <rule ref="category/java/security.xml/HardCodedCryptoKey"/>
+    <rule ref="category/java/security.xml/InsecureCryptoIv"/>
+    <rule ref="category/java/security.xml/InsecureCookie"/>
+    <rule ref="category/java/security.xml/InsecureEncryptionAlgorithm">
+        <properties>
+            <property name="violationSuppressRegex" value=".*DES.*|.*MD5.*|.*SHA1.*"/>
+        </property>
+    </rule>
+
+    <!-- Custom rules for Banking -->
+    <rule name="NoHardcodedSecrets" 
+          message="Hardcoded secrets detected. Use Vault instead."
+          class="net.sourceforge.pmd.lang.java.rule.AbstractJavaRule"
+          language="java"
+          since="1.0">
+        <description>Detects hardcoded secrets, passwords, tokens, keys in code</description>
+        <priority>1</priority>
+        <property name="violationSuppressRegex" value="(?i)(password|secret|token|key|credential|api.?key)\s*=\s*[\"'][^\"']+[\"']"/>
+        <example><![CDATA[
+String password = "hardcoded_password"; // Violation
+String apiKey = System.getenv("API_KEY"); // OK
+        ]]></example>
+    </rule>
+
+    <rule name="NoPIIInLogs"
+          message="PII detected in log statement. Use @Anonymize or masking."
+          class="net.sourceforge.pmd.lang.java.rule.AbstractJavaRule"
+          language="java"
+          since="1.0">
+        <description>Detects potential PII in logging statements</description>
+        <priority>1</priority>
+        <property name="violationSuppressRegex" value="(?i)(cpf|cnpj|email|telefone|account|balance|account_number)\s*[=+]\s*[^;]+"/>
+        <example><![CDATA[
+log.info("Processing CPF: " + cpf); // Violation
+log.info("Processing CPF: {}", maskCpf(cpf)); // OK
+        ]]></example>
+    </rule>
+
+    <rule name="BigDecimalPrecision"
+          message="Financial calculations must use BigDecimal with proper scale and rounding"
+          class="net.sourceforge.pmd.lang.java.rule.AbstractJavaRule"
+          language="java"
+          since="1.0">
+        <description>Enforces BigDecimal usage for financial calculations</description>
+        <priority>2</priority>
+        <property name="violationSuppressRegex" value="(?i)(float|double)\s+\w+\s*=\s*[0-9.]+"/>
+        <example><![CDATA[
+double amount = 100.50; // Violation for financial
+BigDecimal amount = BigDecimal.valueOf(100.50); // OK
+        ]]></example>
+    </rule>
+
+    <rule name="NoFloatDoubleForMoney"
+          message="Never use float/double for monetary values. Use BigDecimal."
+          class="net.sourceforge.pmd.lang.java.rule.AbstractJavaRule"
+          language="java"
+          since="1.0">
+        <priority>1</priority>
+        <property name="violationSuppressRegex" value="(?i)(private|public|protected)\s+(float|double)\s+(amount|value|price|cost|balance|salary|fee|commission|tax|interest|principal)\s*[";=]"/>
+        <example><![CDATA[
+private double balance = 100.00; // Violation
+private BigDecimal balance = BigDecimal.ZERO; // OK
+        ]]></example>
+    </rule>
+
+</ruleset>

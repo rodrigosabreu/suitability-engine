@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!-- Exclude generated code -->
+    <Match>
+        <Class name="~.*\.generated\..*"/>
+    </Match>
+    
+    <Match>
+        <Class name="~.*\.jaxb\..*"/>
+    </Match>
+    
+    <!-- Exclude DTOs and Records from certain checks -->
+    <Match>
+        <Class name="~.*\.dto\..*"/>
+        <Bug pattern="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"/>
+    </Match>
+    
+    <Match>
+        <Class name="~.*\.record\..*"/>
+        <Bug pattern="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"/>
+    </Match>
+    
+    <!-- Exclude test classes from certain checks -->
+    <Match>
+        <Class name="~.*Test"/>
+        <Bug pattern="DM_DEFAULT_ENCODING"/>
+    </Match>
+    
+    <Match>
+        <Class name="~.*Test"/>
+        <Bug pattern="DM_DEFAULT_ENCODING"/>
+    </Match>
+    
+    <!-- Allow certain patterns in test code -->
+    <Match>
+        <Class name="~.*Test"/>
+        <Bug pattern="DM_DEFAULT_ENCODING"/>
+    </Match>
+    
+    <!-- Allow hardcoded constants in test code -->
+    <Match>
+        <Class name="~.*Test"/>
+        <Bug pattern="DMI_CONSTANT_DB_PASSWORD"/>
+    </Match>
+    
+    <Match>
+        <Class name="~.*Test"/>
+        <Bug pattern="DMI_CONSTANT_DB_PASSWORD"/>
+    </Match>
+    
+    <!-- Allow certain patterns in generated code -->
+    <Match>
+        <Class name="~.*Generated"/>
+        <Bug pattern="DMI_CONSTANT_DB_PASSWORD"/>
+    </Match>
+    
+    <!-- Allow certain patterns in DTOs -->
+    <Match>
+        <Class name="~.*DTO"/>
+        <Bug pattern="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"/>
+    </Match>
+    
+    <!-- Allow certain patterns in configuration classes -->
+    <Match>
+        <Class name="~.*Config"/>
+        <Bug pattern="DMI_CONSTANT_DB_PASSWORD"/>
+    </Match>
+    
+    <!-- Exclude certain false positives -->
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="EI_EXPOSE_REP2"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="MS_SHOULD_BE_FINAL"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="MS_MUTABLE_ARRAY"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="MS_MUTABLE_HASHTABLE"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="MS_PKGPROTECT"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="SE_BAD_FIELD"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="SE_INNER_CLASS"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="SE_NO_SERIALVERSIONID"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="SNMP_LONGLONG"/>
+        <Confidence value="low"/>
+    </Match>
+    
+    <Match>
+        <Bug pattern="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"/>
+        <Confidence value="low"/>
+    </Match>
+
+</FindBugsFilter>

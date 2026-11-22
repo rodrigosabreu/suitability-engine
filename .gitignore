@@ -1,0 +1,148 @@
+# Build artifacts
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+target/*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Vault/Secrets
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+vault-token
+
+# Test reports
+target/surefire-reports/
+target/failsafe-reports/
+target/site/
+target/jacoco/
+
+# Dependency check
+dependency-check-report.html
+
+# IDEA
+*.iws
+*.iml
+*.ipr
+
+# Maven
+target/
+.mvn/timing.properties
+
+# Gradle
+.gradle/
+build/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ
+*.iml
+.idea/
+out/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Docker
+.dockerignore
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+
+# Ansible
+*.retry
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+ENV/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# Go
+*.exe
+*.test
+*.prof
+
+# Rust
+target/
+Cargo.lock
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*.log
+replay_pid*.log
